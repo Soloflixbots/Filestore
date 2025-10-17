@@ -1,175 +1,122 @@
-# 📁 File Store Bot
+━━━━━━━━━━━━━━━━━━━━
 
-**File Store Bot** is a lightning-fast, powerful Telegram bot designed to handle file storage, user access control, admin tools, and full customization — all through Telegram UI.
+<h2 align="center">
+    ──「 ғɪʟᴇ sᴛᴏʀᴇ ᴘʀᴏ - ʙʏ ʀɪᴍᴜʀᴜ 」──
+</h2>
 
----
+<p align="center">
+  <img src="https://camo.githubusercontent.com/6cfe41b279bbe53061fc4591d115038dc36acc593bb6062d0692b8a0810d1bde/68747470733a2f2f74652e6c656772612e70682f66696c652f3066373538333231613932613934323861366334382e6a7067">
+</p>
 
-## 🚀 Features
+<p align="center">
+<a href="https://github.com/soloflix-bots/filestore/stargazers"><img src="https://img.shields.io/github/stars/soloflix-bots/filestore?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/soloflix-bots/filestore/network/members"> <img src="https://img.shields.io/github/forks/soloflix-bots/filestore?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/soloflix-bots/filestore/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
+<a href="https://github.com/soloflix-bots/filestore/commits/main"> <img src="https://img.shields.io/github/last-commit/soloflix-bots/filestore?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+</p>
 
-- **📦 Multi-Bot Deployment:**  
-  Deploy multiple bots from a single codebase using a shared setup file. Each bot has its own configuration — great for resellers or power users.
+<p align="center">
+<b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
+</p>
 
-- **📨 Unlimited Force Subscription:**  
-  Add as many channels as you want for force-subscription. Supports **request-based access** — users don’t need to be added to the channel manually. Each link generated has a **timer and auto-expiry** for better control.
+<h3 align="center">
+    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
+</h3>
 
-- **⚙️ Admin Controls:**  
-  Add or remove multiple admins **in a single command**, all from within the bot itself.
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/soloflix-bots/filestore"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
-- **🖼️ Start & FSUB Media:**  
-  Provide image URLs or directly send photos to customize the **Start** and **Force Subscribe** messages.
+<h3 align="center">
+    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴠᴘs/ʟᴏᴄᴀʟ 」─
+</h3>
 
-- **🛡️ Protect & Auto-Delete Content:**  
-  Enable content protection or set auto-delete timers for files — all configurable from within the bot.
+<details><summary><b> - ғᴇᴀᴛᴜʀᴇs ᴀɴᴅ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:</b></summary>
 
-- **💬 Fully Editable Messages:**  
-  Customize start, about, reply, and FSUB messages with formatting and placeholders (see below).
+## ғᴇᴀᴛᴜʀᴇs
+### ›› ʀᴇǫᴜᴇsᴛ ғᴏʀᴄᴇ sᴜʙ: 
+<i>Request-based Force-Sub with private channel link and join request for flexible management.</i>
 
-- **🚫 Ban / Unban Users:**  
-  Control access to the bot by banning or unbanning users instantly.
+### ›› ᴄᴜsᴛᴏᴍ ғᴏʀᴄᴇ sᴜʙ: 
+<i>Add unlimited Force-Sub channels; manage freely.</i>
 
----
+### ›› ᴀᴅᴅ ᴍᴜʟᴛɪ ᴀᴅᴍɪɴs: 
+<i>Add or remove multiple admins.</i>
 
-## 🛠️ Message Placeholders
+### ›› ʙᴀɴ-ᴜɴʙᴀɴ: 
+<i>Ban spammers or annoying users instantly.</i>
 
-### ✨ START Message
+### ›› ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ: 
+<i>Auto-delete shared files after a timer; re-generate link message sent afterward.</i>
+
+### ›› ᴄᴏɴᴛᴇɴᴛ ʙᴜᴛᴛᴏɴ & sᴇᴛ ʙᴜᴛᴛᴏɴ: 
+<i>Add custom buttons and links to shared files.</i>
+
+### ›› ʜɪᴅᴇ/ᴘʀᴏᴛᴇᴄᴛ ᴄᴀᴘᴛɪᴏɴ: 
+<i>Hide or protect captions from being forwarded.</i>
+
+### ›› sᴛᴀʀᴛ & ғsᴜʙ ᴍᴇᴅɪᴀ:
+<i>Set custom media for Start & Force-Sub messages.</i>
+
+### ›› ꜰᴜʟʟʏ ᴇᴅɪᴛᴀʙʟᴇ ᴍᴇssᴀɢᴇs:
+<i>Customize Start, About, Reply, FSUB texts with placeholders.</i>
+
+### ›› ᴄᴜsᴛᴏᴍ ᴜʀʟ sʜᴏʀᴛᴇɴᴇʀ:
+<i>Integrate API-based shorteners easily.</i>
+
+</details>
+
+<details><summary><b> - ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs :</b></summary>
+
+## ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs
+- **start** - Start the bot  
+- **shortner** - Configure shortener  
+- **users** - View user list  
+- **broadcast** - Send message to all  
+- **batch** - Send in batches  
+- **genlink** - Generate a link  
+- **usage** - Check link usage  
+- **pbroadcast** - Premium broadcast  
+- **ban / unban** - Manage banned users  
+- **addpremium / delpremium / premiumusers** - Manage premium users  
+- **request** - Send a request  
+- **profile** - View profile  
+- **db / adddb / removedb** - Manage DB channels  
+
+</details>
+
+<details><summary><b> - ᴠᴀʀɪᴀʙʟᴇs :</b></summary>
 
 ```python
-client.messages.get('START', 'No Start Msg').format(
-    first=message.from_user.first_name,
-    last=message.from_user.last_name,
-    username=None if not message.from_user.username else '@' + message.from_user.username,
-    mention=message.from_user.mention,
-    id=message.from_user.id
-)
-```
+# Bot Instance Configuration
+SESSION = "your_session_name"
+TOKEN = "your_bot_token"
+API_ID = your_api_id
+API_HASH = "your_api_hash"
+WORKERS = 5
 
-📌 Supported placeholders:
-- `{first}` — user's first name  
-- `{last}` — user's last name  
-- `{username}` — `@username` or `None`  
-- `{mention}` — a clickable mention  
-- `{id}` — Telegram user ID  
+# Database Configuration
+DB_URI = "your_mongodb_uri"
+DB_NAME = "your_database_name"
 
----
+# Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
+FSUBS = [[-1001234567890, True, 10]]
 
-### 🧾 ABOUT Message
+# Database Channel
+DB_CHANNEL = -1001234567890
 
-```python
-client.messages.get('ABOUT', 'No Start Message').format(
-    owner_id=client.owner,
-    bot_username=client.username,
-    first=query.from_user.first_name,
-    last=query.from_user.last_name,
-    username=None if not query.from_user.username else '@' + query.from_user.username,
-    mention=query.from_user.mention,
-    id=query.from_user.id
-)
-```
+# Auto Delete Timer (seconds)
+AUTO_DEL = 300
 
-📌 Supported placeholders:
-- `{owner_id}` — owner’s Telegram ID  
-- `{bot_username}` — bot’s `@username`  
-- `{first}` / `{last}` / `{username}` / `{mention}` / `{id}` — same as START placeholders  
+# Admin IDs
+ADMINS = [123456789, 987654321]
 
-❌ Force Subscribe messages **do not support** placeholders.
+# Bot Settings
+DISABLE_BTN = True
+PROTECT = True
 
----
-
-## 🧑‍💻 Configuration Files
-
-### 📄 config.py
-
-This file contains the global bot settings.
-
-```python
-PORT = '8080'
-OWNER_ID = 6321064549
-MSG_EFFECT = 5046509860389126442
-```
-
----
-
-### 📁 setup.json
-
-A list of configurations — one for each bot you want to run.
-
-```json
-[
-    {
-        "session": "ses",  // unique session name for this bot
-        "token": "YOUR_BOT_TOKEN",
-        "api_id": "YOUR_API_ID",
-        "api_hash": "YOUR_API_HASH",
-        "workers": 8,
-
-        "db_uri": "mongodb+srv://Cluster0:your_db@cluster.mongodb.net/?retryWrites=true&w=majority",
-        "db_name": "name",
-
-        "fsubs": [[-1002074478106, true, 5]],  // [channel_id, request_enabled, link_expiry_in_minutes]
-        "db": -1002074478106,  // logs or updates group
-
-        "auto_del": 0,  // auto delete message time in seconds (0 = disabled)
-
-        "messages": {
-            "START": "<blockquote expandable>__Start message here...__</blockquote>",
-            "FSUB": "",
-            "ABOUT": "This bot is operated by {owner_id}.",
-            "REPLY": "Your reply text here.",
-            "START_PHOTO": "",  // image URL or Telegram file ID
-            "FSUB_PHOTO": ""
-        },
-
-        "admins": [78324663, 73468932],
-        "disable_btn": true,
-        "protect": false
-    }
-]
-```
-
-📝 Notes:
-- You can add **multiple bot configs** in the same `setup.json`
-- Make sure **`session` names are unique** for each entry
-- The `fsubs` list supports multiple channels
-
----
-
-## 💡 Usage Guide
-
-1. **Clone the repo**:
-
-```bash
-git clone https://github.com/ArihantSharma/FileStoreBot
-cd FileStoreBot
-bash start.sh
-```
-
-2. **Install requirements**:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. **Edit your `config.py`** and `setup.json` as explained above.
-
-4. **Run the bot**:
-
-```bash
-python3 main.py
-```
-
-You’re done!
-
----
-
-## 🛒 Purchase Full Source
-
-Want to use or resell this bot?
-
-📩 **Contact [@VOATcb](https://t.me/VOATcb) on Telegram** to purchase the code or for support.
-
----
-
-## 📜 License
-
-This code is proprietary. You are not allowed to redistribute, resell, or publish it without explicit permission from the owner.
-
+# Messages Configuration
+MESSAGES = {
+    "START": "Your start message here with {first}",
+    "FSUB": "Your force subscription message",
+    "ABOUT": "About message",
+}
