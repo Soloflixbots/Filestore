@@ -141,7 +141,7 @@ MESSAGES = {
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/https://t.me/Hall_of_Soul_Chat"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/Hall_of_Soul_Chat"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
 <a href="https://telegram.me/Soloflix_Bots"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
@@ -154,7 +154,7 @@ MESSAGES = {
 </h3>
 
 - <b>[sᴏʟᴏғʟɪx](https://t.me/Soloflix_Bots)</b>
-- <b>[ɴᴀᴘᴀᴇxᴛʀᴀ](https://t.me/NaapaExtraa)  ➻  [ʙᴀsᴇ ʀᴇᴘᴏ](https://github.com/ArihantSharma/FileStoreBot) </b>
+- <b>[ɴᴀᴘᴀᴇxᴛʀᴀ](https://t.me/NaapaExtraa)</b>
 
 <h3 align="center">
 <b>🤝 ᴄᴏɴᴛʀɪʙᴜᴛɪɴɢ
@@ -169,6 +169,7 @@ MESSAGES = {
 
 
 ━━━━━━━━━━━━━━━━━━━━
+
 
 
 
