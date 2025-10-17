@@ -60,27 +60,19 @@
 ### ›› ꜰᴜʟʟʏ ᴇᴅɪᴛᴀʙʟᴇ ᴍᴇssᴀɢᴇs:
 <i>Customize Start, About, Reply, FSUB texts with placeholders.</i>
 
-### ›› ᴄᴜsᴛᴏᴍ ᴜʀʟ sʜᴏʀᴛᴇɴᴇʀ:
-<i>Integrate API-based shorteners easily.</i>
-
 </details>
 
 <details><summary><b> - ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs :</b></summary>
 
 ## ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs
-- **start** - Start the bot  
-- **shortner** - Configure shortener  
+- **start** - Start the bot    
 - **users** - View user list  
 - **broadcast** - Send message to all  
 - **batch** - Send in batches  
 - **genlink** - Generate a link  
 - **usage** - Check link usage  
 - **pbroadcast** - Premium broadcast  
-- **ban / unban** - Manage banned users  
-- **addpremium / delpremium / premiumusers** - Manage premium users  
-- **request** - Send a request  
-- **profile** - View profile  
-- **db / adddb / removedb** - Manage DB channels  
+- **ban / unban** - Manage banned users 
 
 </details>
 
@@ -120,3 +112,4 @@ MESSAGES = {
     "FSUB": "Your force subscription message",
     "ABOUT": "About message",
 }
+
