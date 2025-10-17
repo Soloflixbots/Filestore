@@ -153,8 +153,8 @@ MESSAGES = {
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[ʏᴀᴛᴏ](https://github.com/Codeflix-Bots)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/proyato) </b>
-- <b>[ᴠᴏᴀᴛ](https://github.com/Codeflix-Bots)  ➻  [ʙᴀsᴇ ʀᴇᴘᴏ](https://github.com/ArihantSharma/FileStoreBot) </b>
+- <b>[sᴏʟᴏғʟɪx](https://t.me/Soloflix_Bots)</b>
+- <b>[ɴᴀᴘᴀᴇxᴛʀᴀ](https://t.me/NaapaExtraa)  ➻  [ʙᴀsᴇ ʀᴇᴘᴏ](https://github.com/ArihantSharma/FileStoreBot) </b>
 
 <h3 align="center">
 <b>🤝 ᴄᴏɴᴛʀɪʙᴜᴛɪɴɢ
@@ -169,6 +169,7 @@ MESSAGES = {
 
 
 ━━━━━━━━━━━━━━━━━━━━
+
 
 
 
