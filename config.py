@@ -4,7 +4,7 @@ import os
 
 LOG_FILE_NAME = "bot.log"
 PORT = os.environ.get('PORT', '8080')
-OWNER_ID = 8154074711
+OWNER_ID = 
 MSG_EFFECT = 5046509860389126442
 
 def LOGGER(name: str, client_name: str) -> logging.Logger:
