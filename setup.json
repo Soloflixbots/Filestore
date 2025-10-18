@@ -1,28 +1,25 @@
 [
     {
-        "session": "ses",
-        "token": "8416311172:AAF_PF1ggTonyVQSE9waff_h7rcokioyGN0",
-        "api_id": "22884130",
-        "api_hash": "a69e8b16dac958f1bd31eee360ec53fa",
-        "workers": 8,
-        "db_uri": "mongodb+srv://Jerry:jerry&jackorganization@jerry.shntw0i.mongodb.net/?retryWrites=true&w=majority&appName=Jerry",
-        "db_name": "name",
-        "fsubs": [[-1002845206074, true, 5]],
-        "db": -1002724613402,
+        "session": "",
+        "token": "",
+        "api_id": "",
+        "api_hash": "",
+        "workers": 0,
+        "db_uri": "",
+        "db_name": "",
+        "fsubs": [],
+        "db": 0,
         "auto_del": 0,
         "messages": {
-            "START": "<blockquote expandable>__Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit sed.\nVivamus luctus urna sed urna.\nCurabitur blandit tempus porttitor.\nNullam quis risus eget urna.__</blockquote>",
+            "START": "",
             "FSUB": "",
-            "ABOUT": "ABOUT MSG",
-            "REPLY": "reply_text",
+            "ABOUT": "",
+            "REPLY": "",
             "START_PHOTO": "",
             "FSUB_PHOTO": ""
         },
         "admins": [],
-        "disable_btn": true,
+        "disable_btn": false,
         "protect": false
     }
-
 ]
-
-
