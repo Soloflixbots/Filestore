@@ -118,20 +118,6 @@ MESSAGES = {
 
 <details>
 <summary><h3>
-- <b> ᴠᴘs/ʟᴏᴄᴀʟ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ </b>
-</h3></summary>
-
-- Get your [Necessary Variables](https://github.com/Codeflix-Bots/filestore/blob/yato/config.py)
-- git clone https://github.com/Codeflix-Bots/filestore
-- # Install Packages
-- pip3 install -U -r requirements.txt
-- Edit config.py with variables as given below then run bot
-- python3 main.py
-
-<p align="center">
-  <img src="https://graph.org/file/c7727a6d27332ffcd8f03.jpg">
-</p>
-
 
 </details>
 ━━━━━━━━━━━━━━━━━━━━
@@ -169,6 +155,7 @@ MESSAGES = {
 
 
 ━━━━━━━━━━━━━━━━━━━━
+
 
 
 
