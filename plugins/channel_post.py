@@ -15,7 +15,7 @@ not_numeric_filter = filters.create(is_not_numeric_reply)
 
 @Client.on_message(
     filters.private &
-    ~filters.command(['start', 'users', 'broadcast', 'batch', 'genlink', 'usage', 'pbroadcast', 'ban', 'unban', 'autobatch', 'help']) &
+    ~filters.command(['start', 'users', 'broadcast', 'batch', 'genlink', 'usage', 'pbroadcast', 'ban', 'unban', 'autobatch', 'help', 'search']) &
     not_numeric_filter
 )
 async def channel_post(client: Client, message: Message):
@@ -68,5 +68,6 @@ async def new_post(client: Client, message: Message):
     except Exception as e:
         print(e)
         pass
+
 
 
