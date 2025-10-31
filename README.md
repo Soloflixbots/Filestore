@@ -117,7 +117,6 @@ MESSAGES = {
 </details>
 
 <details>
-<summary><h3>
 
 </details>
 ━━━━━━━━━━━━━━━━━━━━
@@ -155,6 +154,7 @@ MESSAGES = {
 
 
 ━━━━━━━━━━━━━━━━━━━━
+
 
 
 
