@@ -1,2 +1,5 @@
-#!/bin/bash
-python3 main.py
+#!/bin/sh
+set -e
+
+echo "Starting Python script..."
+python main.py
