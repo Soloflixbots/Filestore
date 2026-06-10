@@ -56,7 +56,7 @@
 𝖦𝖾𝗇𝖾𝗋𝖺𝗍𝖾 𝖺𝗇𝖽 𝗌𝗁𝖺𝗋𝖾 𝖽𝗂𝗋𝖾𝖼𝗍 𝗅𝗂𝗇𝗄𝗌 𝗍𝗈 𝖿𝗂𝗅𝖾𝗌 𝗐𝗂𝗍𝗁 𝖼𝗎𝗌𝗍𝗈𝗆 𝖾𝗑𝗉𝗂𝗋𝗒 𝗍𝗂𝗆𝖾𝗋.
 
 ❐ 𝟦 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 𝖲𝗎𝗉𝗉𝗈𝗋𝗍𝗌:
-𝖲𝗎𝗉𝗉𝗈𝗋𝗍𝗌 𝖬𝗈𝗇𝗀𝗈𝖣𝖡, 𝖯𝗈𝗌𝗍𝗀𝗋𝖾𝖲𝖰𝖫, 𝖬𝗒𝖲𝖰𝖫, 𝖺𝗇𝖽 𝖱𝖾𝖽𝗂𝗌 𝖿𝗈𝗋 𝖿𝗅𝖾𝗑𝗂𝖻𝗅𝖾 𝖽𝖺𝗍𝖺 𝖿𝗅𝗈𝗐.
+𝖲𝗎𝗉𝗉𝗈𝗋𝗍𝗌 𝖬𝗈𝗇𝗀𝗈𝖣𝖡
 
 ❐ 𝖬𝗎𝗅𝗍𝗂𝗉𝗅𝖾 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖲𝗎𝗉𝗉𝗈𝗋𝗍:
 𝖠𝖽𝖽 𝗎𝗇𝗅𝗂𝗆𝗂𝗍𝖾𝖽 𝖽𝖺𝗍𝖺𝖻𝖺𝗌𝖾 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗐𝗂𝗍𝗁𝗈𝗎𝗍 𝖺𝗇𝗒 𝗅𝗂𝗆𝗂𝗍 𝖿𝗈𝗋 𝗌𝖾𝖺𝗆𝗅𝖾𝗌𝗌 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍.
@@ -92,9 +92,6 @@ WORKERS = 5
 
 # Database Configuration (4 DB Support)
 DB_URI = "your_mongodb_uri"
-POSTGRES_URI = "your_postgres_uri"
-MYSQL_URI = "your_mysql_uri"
-REDIS_URI = "your_redis_uri"
 DB_NAME = "your_database_name"
 
 # Multiple Database Channels Support (Unlimited)
