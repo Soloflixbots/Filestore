@@ -12,7 +12,7 @@
 
 ✦ 𝖣𝖾𝗉𝗅𝗈𝗒 𝗈𝗇 𝖧𝖾𝗋𝗈𝗄𝗎
 
-✬ https://dashboard.heroku.com/new?template=https://github.com/soloflix-bots/filestore
+✬ <a href="https://dashboard.heroku.com/new?template=https://github.com/soloflix-bots/filestore">Click Here</a>
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -131,15 +131,24 @@ MESSAGES = {
 
 ✦ 𝖲𝗎𝗉𝗉𝗈𝗋𝗍
 
-✬ https://t.me/Hall_of_Soul_Chat
-✬ https://t.me/Soloflix_Bots
+<p align="center">
+<a href="https://t.me/WeiFlix_Support"><img src="https://img.shields.io/badge/WeiFlix_Support-Telegram-blue?style=for-the-badge&logo=telegram"></a>
+</p>
+
+━━━━━━━━━━━━━━━━━━━━
+
+✦ 𝖢𝗁𝖺𝗇𝗇𝖾𝗅
+
+<p align="center">
+<a href="https://t.me/Soloflix_Bots"><img src="https://img.shields.io/badge/Soloflix_Bots-Telegram-blue?style=for-the-badge&logo=telegram"></a>
+</p>
 
 ━━━━━━━━━━━━━━━━━━━━
 
 ✦ 𝖢𝗋𝖾𝖽𝗂𝗍𝗌
 
-✬ 𝖲𝗈𝗅𝗈𝖿𝗅𝗂𝗑
-✬ 𝖭𝖺𝗉𝖺𝖤𝗑𝗍𝗋𝖺
+✬ <a href="https://t.me/mr_Solo_peak">Mr.Solo</a>
+✬ <a href="https://t.me/NaapaExtraa">NapaExtra</a>
 
 ━━━━━━━━━━━━━━━━━━━━
 
