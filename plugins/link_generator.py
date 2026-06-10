@@ -2,81 +2,138 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ParseMode
 from pyrogram.errors.pyromod import ListenerTimeout
-from helper.helper_func import encode, get_message_id
-
+from helper.helper_func import encode, get_message_id, get_redirect_link
+import asyncio
 async def ask_for_message(client, user_id, prompt_text):
-    """A helper function to ask for a message and listen for the response."""
     prompt_message = await client.send_message(user_id, prompt_text, parse_mode=ParseMode.HTML)
     try:
-        response = await client.listen(chat_id=user_id, filters=(filters.forwarded | (filters.text & ~filters.forwarded)), timeout=60)
+        response = await client.listen(
+            chat_id=user_id,
+            filters=(filters.forwarded | (filters.text & ~filters.forwarded)),
+            timeout=60
+        )
         await prompt_message.delete()
         return response
     except ListenerTimeout:
-        await prompt_message.edit("<b>Timeout!</b> Please try the command again.")
+        await prompt_message.edit("<b>⏰ 𝖳𝗂𝗆𝖾𝗈𝗎𝗍!</b> 𝖯𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝗒 𝗍𝗁𝖾 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝖺𝗀𝖺𝗂𝗇.")
         return None
+
+def create_smart_link_message(direct_link, link_type="𝖥𝗂𝗅𝖾"):
+    return (
+        f"<b>✅ {link_type} 𝖫𝗂𝗇𝗄 𝖦𝖾𝗇𝖾𝗋𝖺𝗍𝖾𝖽!</b>\n\n"
+        f"<b>🔗 𝖣𝗂𝗋𝖾𝖼𝗍 𝖫𝗂𝗇𝗄:</b>\n"
+        f"<code>{direct_link}</code>"
+    )
+
+def create_smart_buttons(direct_link):
+    buttons = [[InlineKeyboardButton("✦ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 𝖿𝗈𝗋 𝖥𝗂𝗅𝖾𝗌 •", url=direct_link)]]
+    return InlineKeyboardMarkup(buttons)
 
 @Client.on_message(filters.private & filters.command('batch'))
 async def batch(client: Client, message: Message):
     if message.from_user.id not in client.admins:
         return await message.reply(client.reply_text)
-    
     while True:
-        first_message = await ask_for_message(client, message.from_user.id, "Forward the <b>First Message</b> from the DB Channel (with quotes), or send its link.")
-        if not first_message: return
+        first_message = await ask_for_message(
+            client,
+            message.from_user.id,
+            "<b>📨 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝖾 <u>𝖥𝗂𝗋𝗌𝗍 𝖬𝖾𝗌𝗌𝖺𝗀𝖾</u> 𝖿𝗋𝗈𝗆 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅</b>\n\n"
+            "<i>𝖸𝗈𝗎 𝖼𝖺𝗇 𝖺𝗅𝗌𝗈 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗅𝗂𝗇𝗄</i>"
+        )
+        if not first_message:
+            return
 
-        f_msg_id = await get_message_id(client, first_message)
+        f_channel_id, f_msg_id = await get_message_id(client, first_message)
         if f_msg_id:
             break
         else:
-            await first_message.reply("❌ <b>Invalid Message</b>\n\nThis message is not from the configured DB Channel. Please try again.", quote=True)
+            await first_message.reply(
+                "❌ <b>𝖨𝗇𝗏𝖺𝗅𝗂𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾</b>\n\n"
+                "𝖳𝗁𝗂𝗌 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗂𝗌 𝗇𝗈𝗍 𝖿𝗋𝗈𝗆 𝖺 𝖼𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖾𝖽 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝗒 𝖺𝗀𝖺𝗂𝗇.",
+                quote=True,
+                parse_mode=ParseMode.HTML
+            )
 
     while True:
-        second_message = await ask_for_message(client, message.from_user.id, "Now, forward the <b>Last Message</b> from the DB Channel (with quotes), or send its link.")
-        if not second_message: return
+        second_message = await ask_for_message(
+            client,
+            message.from_user.id,
+            "<b>📨 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗍𝗁𝖾 <u>𝖫𝖺𝗌𝗍 𝖬𝖾𝗌𝗌𝖺𝗀𝖾</u> 𝖿𝗋𝗈𝗆 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅</b>\n\n"
+            "<i>𝖸𝗈𝗎 𝖼𝖺𝗇 𝖺𝗅𝗌𝗈 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗅𝗂𝗇𝗄</i>"
+        )
+        if not second_message:
+            return
 
-        s_msg_id = await get_message_id(client, second_message)
+        s_channel_id, s_msg_id = await get_message_id(client, second_message)
         if s_msg_id:
             break
         else:
-            await second_message.reply("❌ <b>Invalid Message</b>\n\nThis message is not from the configured DB Channel. Please try again.", quote=True)
+            await second_message.reply(
+                "❌ <b>𝖨𝗇𝗏𝖺𝗅𝗂𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾</b>\n\n"
+                "𝖳𝗁𝗂𝗌 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗂𝗌 𝗇𝗈𝗍 𝖿𝗋𝗈𝗆 𝖺 𝖼𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖾𝖽 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝗒 𝖺𝗀𝖺𝗂𝗇.",
+                quote=True,
+                parse_mode=ParseMode.HTML
+            )
 
-    string = f"get-{f_msg_id * abs(client.db_channel.id)}-{s_msg_id * abs(client.db_channel.id)}"
+    if f_channel_id != s_channel_id:
+        return await second_message.reply(
+            "❌ <b>𝖤𝗋𝗋𝗈𝗋</b>\n\n"
+            "𝖡𝗈𝗍𝗁 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝗆𝗎𝗌𝗍 𝖻𝖾 𝖿𝗋𝗈𝗆 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾 𝖼𝗁𝖺𝗇𝗇𝖾𝗅.",
+            quote=True,
+            parse_mode=ParseMode.HTML
+        )
+    string = f"batch_{f_channel_id}_{f_msg_id}_{s_msg_id}"
     base64_string = await encode(string)
-    link = f"https://t.me/{client.username}?start={base64_string}"
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📤 ꜱʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={link}')]])
-    
+    direct_link = await get_redirect_link(client, base64_string)
+    response_text = create_smart_link_message(direct_link, "𝖡𝖺𝗍𝖼𝗁")
+    reply_markup = create_smart_buttons(direct_link)
     await second_message.reply_text(
-        f"<b>ʜᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʟɪɴᴋ :</b>\n\n{link}", 
-        quote=True, 
+        response_text,
+        quote=True,
         reply_markup=reply_markup,
-        parse_mode=ParseMode.HTML
+        parse_mode=ParseMode.HTML,
+        disable_web_page_preview=True
     )
-
+    client.LOGGER(__name__, client.name).info(
+        f"Batch link generated by {message.from_user.id}: {f_msg_id}-{s_msg_id} from {f_channel_id}"
+    )
 
 @Client.on_message(filters.private & filters.command('genlink'))
 async def link_generator(client: Client, message: Message):
     if message.from_user.id not in client.admins:
         return await message.reply(client.reply_text)
-    
     while True:
-        channel_message = await ask_for_message(client, message.from_user.id, "Forward a message from the DB Channel (with quotes), or send its link.")
-        if not channel_message: return
+        channel_message = await ask_for_message(
+            client,
+            message.from_user.id,
+            "<b>📨 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝖺 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝖿𝗋𝗈𝗆 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅</b>\n\n"
+            "<i>𝖸𝗈𝗎 𝖼𝖺𝗇 𝖺𝗅𝗌𝗈 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗅𝗂𝗇𝗄</i>"
+        )
+        if not channel_message:
+            return
 
-        msg_id = await get_message_id(client, channel_message)
+        channel_id, msg_id = await get_message_id(client, channel_message)
         if msg_id:
             break
         else:
-            await channel_message.reply("❌ <b>Invalid Message</b>\n\nThis message is not from the configured DB Channel. Please try again.", quote=True)
+            await channel_message.reply(
+                "❌ <b>𝖨𝗇𝗏𝖺𝗅𝗂𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾</b>\n\n"
+                "𝖳𝗁𝗂𝗌 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗂𝗌 𝗇𝗈𝗍 𝖿𝗋𝗈𝗆 𝖺 𝖼𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖾𝖽 𝖣𝖻 𝖢𝗁𝖺𝗇𝗇𝖾𝗅. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝗒 𝖺𝗀𝖺𝗂𝗇.",
+                quote=True,
+                parse_mode=ParseMode.HTML
+            )
 
-    base64_string = await encode(f"get-{msg_id * abs(client.db_channel.id)}")
-    link = f"https://t.me/{client.username}?start={base64_string}"
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("📤 ꜱʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={link}')]])
-
+    base64_string = await encode(f"single_{channel_id}_{msg_id}")
+    direct_link = await get_redirect_link(client, base64_string)
+    response_text = create_smart_link_message(direct_link, "𝖲𝗂𝗇𝗀𝗅𝖾 𝖥𝗂𝗅𝖾")
+    reply_markup = create_smart_buttons(direct_link)
     await channel_message.reply_text(
-        f"<b>Generated Link:</b>\n\n{link}", 
-        quote=True, 
+        response_text,
+        quote=True,
         reply_markup=reply_markup,
-        parse_mode=ParseMode.HTML
+        parse_mode=ParseMode.HTML,
+        disable_web_page_preview=True
     )
-
-
+    client.LOGGER(__name__, client.name).info(
+        f"Single link generated by {message.from_user.id}: {msg_id} from {channel_id}"
+    )
